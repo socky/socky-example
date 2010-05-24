@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#chat {
+  position: absolute;
+  top: 10px;
+  bottom: 110px;
+  left: 10px;
+  right: 10px;
+}
+
+#messages {
+  height: 100%;
+  padding: 5px;
+  border: 1px solid #000000;
+  overflow: auto;
+}
+
+  #messages p {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 1.5;
+  }
+
+#logout {
+  float: right;
+}
