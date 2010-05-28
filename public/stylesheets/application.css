@@ -4,6 +4,19 @@ html, body {
   padding: 0;
 }
 
+#login_form {
+  text-align: center;
+  padding-top: 200px;
+}
+
+#login_form input {
+  margin-left: 10px;
+}
+
+#login_form input[type=text] {
+  width: 150px;
+}
+
 #chat {
   position: absolute;
   top: 10px;
@@ -19,12 +32,16 @@ html, body {
   overflow: auto;
 }
 
-  #messages p {
-    margin: 0;
-    padding: 0;
-    border: none;
-    line-height: 1.5;
-  }
+#messages p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1.5;
+}
+
+#chat input[type=text] {
+  width: 500px;
+}
 
 #logout {
   float: right;
