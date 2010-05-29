@@ -4,21 +4,21 @@ class SockiesController < ApplicationController
 
   def subscribe
     render :socky do |page|
-      page.insert_html :top, 'messages', "<p>User #{h params[:client_id]} logged in</p>"
+      page.insert_html :top, 'messages', render(:partial => "login_message", :locals => {:user => params[:client_id]})
     end
     render :text => "ok"
   end
 
   def unsubscribe
     render :socky do |page|
-      page.insert_html :top, 'messages', "<p>User #{h params[:client_id]} logged out</p>"
+      page.insert_html :top, 'messages', render(:partial => "logout_message", :locals => {:user => params[:client_id]})
     end
     render :text => "ok"
   end
 
   def message
-    render :socky => { :type => :send_to_all } do |page|
-      page.insert_html :top, 'messages', "<p><b>#{h params[:current_user]}:</b> #{h params[:message]}</p>"
+    render :socky do |page|
+      page.insert_html :top, 'messages', render(:partial => "message", :locals => {:user => params[:current_user], :message => params[:message]})
     end
     render :update do |page|
       page << "$('message').clear();"

@@ -1,13 +1,19 @@
 <% content_for :head do %>
-  <%= socky :client_id => params[:client_id] %>
+  <%= socky :client_id => params[:login] %>
 <% end %>
 
 <div id="chat">
-  <div id="messages"></div>
-  <a href="/" id="logout">Logout</a>
-  <% form_remote_tag :url => message_socky_path do %>
-    <%= hidden_field_tag :current_user, params[:client_id] %>
-    <%= text_field_tag :message %>
-    <%= submit_tag "Send message" %>
-  <% end %>
+  <h1>Socky Chat</h1>
+  <div id="messages_container">
+    <ul id="messages">
+    </ul>
+  </div>
+  <div id="message_form_container">
+    <a href="/" id="logout">Logout</a>
+    <% form_remote_tag :url => message_socky_path do %>
+      <%= hidden_field_tag :current_user, params[:login] %>
+      <%= text_field_tag :message %>
+      <%= submit_tag "Send message" %>
+    <% end %>
+  </div>
 </div>
