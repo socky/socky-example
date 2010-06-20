@@ -8,6 +8,8 @@ h2. Getting Started
 @gem install socky@
 * Install the "socky plugin":http://github.com/imanel/socky_plugin
 @script/plugin install git://github.com/imanel/socky_plugin.git@
+* Generate javascripts:
+@rake socky:install@
 * Generate socky config file:
 @socky -g config/socky.yml@
 * Run server

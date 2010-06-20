@@ -1,6 +1,8 @@
-config/database.yml
+config/*.yml
 db/*.sqlite3
 doc
 log
+public/javascripts/socky
+public/javascripts/socky.js
 tmp
 vendor/plugins/socky_plugin
