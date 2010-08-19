@@ -15,6 +15,8 @@ h2. Getting Started
 * Run server
 @socky -c config/socky.yml@
 
+See also "demo page":http://sockydemo.imanel.org
+
 h2. License
 
 (The MIT License)
