@@ -1,69 +1,125 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
+	color: #777;
+	background: #CCFFFF;
 }
 
-h1 {
-  font-family: Georgia;
-  font-size: 25px;
-  color: #0000ff;
+a {
+	color: #00c;
+	text-decoration: none;
 }
 
-#login_form {
-  text-align: center;
-  padding-top: 200px;
+a:hover {
+	text-decoration: underline;
 }
 
-#login_form input {
-  margin-left: 10px;
+#login_wrapper, #chat_wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0px 0px 90px #888;
+	-webkit-box-shadow: 0px 0px 90px #888;
+	-moz-box-shadow: 0px 0px 90px #888;
+	padding: 10px;
+	background: white;
+	behavior: url('/stylesheets/PIE.htc');
 }
 
-#login_form input[type=text] {
-  width: 150px;
+#login_wrapper {
+	width: 480px;
+	height: 160px;
+	margin: -80px 0 0 -250px;	
 }
 
-#chat {
-  margin: 0 20px;
-  padding: 10px;
-  background: #efefef;
+#chat_wrapper {
+	width: 480px;
+	height: 380px;
+	margin: -200px 0 0 -250px;
 }
 
+#wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#logout_link {
+	display:block;
+	text-indent: -9999px;
+	width: 35px;
+	height: 35px;
+	background: url('/images/logout.png') no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	margin: -217px 0 0 232px;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+	margin: 1em 0;
+}
+
+form {
+	overflow: hidden;
+	position: absolute;
+	bottom: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	background: transparent;
+	padding: 15px 10px 13px;
+	margin: 0;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid #ccc;
+	float: left;
+	height: 48px;
+}
+
+input.text {
+	width: 400px;
+	border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	behavior: url('/stylesheets/PIE.htc');
+}
+
+input.submit {
+	border-left: 0;
+	width: 80px;
+	border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	behavior: url('/stylesheets/PIE.htc');
+}
 
 #messages {
-  height: 50%;
-  padding: 5px;
-  overflow: auto;
+	margin: 0;
+	padding: 0;
+	height: 320px;
+	width: 100%;
+	list-style-type: none;
+	overflow: auto;
 }
 
 #messages li {
-  padding: 5px 0px;
-  border-bottom: 1px solid #80ff00;
-  font-size: 14px;
+	font-size: 14px;
+}
+#messages li.login {
+	color: #0e0;
+}
+#messages li.logout {
+	color: #f55;
 }
 
-#messages li span {
-  font-weight: bold;
-}
-
-#logout {
-  float: right;
-}
-
-#message_form_container input[type="text"] {
-  border: 2px solid #0080ff;
-  font-size: 15px;
-  padding: 2px;
-  width: 50%;
-}
-
-#message_form_container input[type="submit"] {
-  -webkit-border-radius: 2px;
-  background: #80ff00;
-  border: 0px;
-  padding: 5px;
-  font-size: 14px;
-  margin: 4px;
-
+#messages li span{
+	color: black;
 }

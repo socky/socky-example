@@ -3,26 +3,26 @@ class SockiesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def subscribe
-    Socky.send do |page|
-      page.insert_html :top, 'messages', render(:partial => "login_message", :locals => {:user => params[:client_id]})
-    end
+    send_to_clients ["login", "", "User #{params[:client_id]} logged in"]
     render :text => "ok"
   end
 
   def unsubscribe
-    Socky.send do |page|
-      page.insert_html :top, 'messages', render(:partial => "logout_message", :locals => {:user => params[:client_id]})
-    end
+    send_to_clients ["logout", "", "User #{params[:client_id]} logged out"]
     render :text => "ok"
   end
 
   def message
-    Socky.send do |page|
-      page.insert_html :top, 'messages', render(:partial => "message", :locals => {:user => params[:current_user], :message => params[:message]})
-    end
+    send_to_clients ["message", "#{params[:current_user]}: ", params[:message]]
     render :update do |page|
       page << "$('message').clear();"
     end
+  end
+  
+  private
+  
+  def send_to_clients(data)
+    Socky.send(data.collect{|d| CGI.escapeHTML(d)}.to_json)
   end
 
 end
