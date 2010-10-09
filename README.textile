@@ -12,6 +12,9 @@ h2. Getting Started
 @rake socky:install@
 * Generate socky config file:
 @socky -g config/socky.yml@
+* Uncomment two lines in @config/socky.yml@:
+@:subscribe_url: http://localhost:3000/socky/subscribe
+:unsubscribe_url: http://localhost:3000/socky/unsubscribe@
 * Run server
 @socky -c config/socky.yml@
 
