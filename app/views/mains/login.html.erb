@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 <div id="login_wrapper">
 	<div id="wrapper">
 		<p>Welcome to <a href="http://rubygems.org/gems/socky">socky</a> chat!</p>
 		<p>To enter chat please enter your nick</p>
-		<% form_tag chat_path, :method => :get, :id => "login_form" do %>
+		<%= form_tag chat_path, :method => :get, :id => "login_form" do %>
 		    <%= text_field_tag :login, "", :class => "text" %>
 		    <%= submit_tag "Enter", :class => "submit" %>
 		<% end %>
 	</div>
 </div>
-=======
-<%= form_tag chat_path, :method => :get, :id => "login_form" do %>
-    <%= label_tag :login, "Login:" %>
-    <%= text_field_tag :login %>
-    <%= submit_tag "Enter" %>
-<% end %>
->>>>>>> rails3
