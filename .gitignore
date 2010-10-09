@@ -1,6 +1,7 @@
 .bundle
 Gemfile.lock
 config/*.yml
+!config/database.yml
 db/*.sqlite3
 doc
 log
