@@ -1,4 +1,5 @@
 .bundle
+Gemfile.lock
 config/*.yml
 db/*.sqlite3
 doc
