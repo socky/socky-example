@@ -7,7 +7,7 @@
 	<div id="wrapper">
 		<ul id="messages"></ul>
 
-	  <% form_remote_tag :url => message_socky_path, :id => "message_form" do %>
+	  <%= form_remote_tag :url => message_socky_path, :id => "message_form" do %>
 	    <%= hidden_field_tag :current_user, params[:login] %>
 	    <%= text_field_tag :message, "", :class => "text" %>
 	    <%= submit_tag "Send", :class => "submit" %>

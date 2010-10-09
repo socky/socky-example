@@ -7,7 +7,7 @@ h2. Getting Started
 * Install the "socky gem":http://github.com/imanel/socky_gem
 @gem install socky@
 * Install the "socky plugin":http://github.com/imanel/socky_plugin
-@script/plugin install git://github.com/imanel/socky_plugin.git@
+@rails plugin install git://github.com/imanel/socky_plugin.git@
 * Generate javascripts:
 @rake socky:install@
 * Generate socky config file:
