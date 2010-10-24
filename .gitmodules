@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/socky_plugin"]
-	path = vendor/plugins/socky_plugin
-	url = git://github.com/imanel/socky_plugin.git
