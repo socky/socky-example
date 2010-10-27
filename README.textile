@@ -4,8 +4,8 @@ Socky is push server for Ruby on Rails based on WebSockets. It allows you to bre
 
 h2. Getting Started
 
-* Install the "socky gem":http://github.com/imanel/socky_gem
-@gem install socky@
+* Install the "socky server gem":http://github.com/socky/socky-server-ruby
+@gem install socky-server@
 * Install the "socky plugin":http://github.com/imanel/socky_plugin
 @rails plugin install git://github.com/imanel/socky_plugin.git@
 * Generate javascripts:
