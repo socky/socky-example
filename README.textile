@@ -6,8 +6,8 @@ h2. Getting Started
 
 * Install the "socky server gem":http://github.com/socky/socky-server-ruby
 @gem install socky-server@
-* Install the "socky plugin":http://github.com/imanel/socky_plugin
-@rails plugin install git://github.com/imanel/socky_plugin.git@
+* Install the "socky-client":http://github.com/socky/socky-client-ruby and "socky-client-rails":http://github.com/socky/socky-client-rails gems
+@bundle install@
 * Generate javascripts:
 @rake socky:install@
 * Generate socky config file:
@@ -19,8 +19,11 @@ h2. Getting Started
   :unsubscribe_url: http://localhost:3000/socky/unsubscribe
 </pre>
 
-* Run server
+* Run Socky server
 @socky -c config/socky.yml@
+* Run Rails app
+@rails s@
+* Point to http://localhost:3000
 
 See also "demo page":http://sockydemo.imanel.org
 
