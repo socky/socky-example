@@ -1,6 +1,18 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+Event.observe(window, 'load', function() {
+  Event.observe('message_form', 'submit', function(event) {
+    $('message_form').request({
+      method: 'post',
+      onSuccess: function(t) {
+        $('message').value = t.responseText;
+      }
+    });
+    Event.stop(event); // stop the form from submitting
+  });
+});
+
 $.message_counter = 0;
 
 Socky.prototype.respond_to_message = function(msg) {

@@ -14,13 +14,11 @@ class SockiesController < ApplicationController
 
   def message
     send_to_clients ["message", "#{params[:current_user]}: ", params[:message]]
-    render :update do |page|
-      page << "$('message').clear();"
-    end
+    render :nothing => true
   end
-  
+
   private
-  
+
   def send_to_clients(data)
     Socky.send(data.collect{|d| CGI.escapeHTML(d)}.to_json)
   end
