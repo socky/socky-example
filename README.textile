@@ -8,9 +8,9 @@ h2. Getting Started
 @gem install socky-server@
 * Install the "socky-client":http://github.com/socky/socky-client-ruby and "socky-client-rails":http://github.com/socky/socky-client-rails gems
 @bundle install@
-* Generate javascripts:
-@rake socky:install@
-* Generate socky config file:
+* Generate Rails config file:
+@rake socky:create_config@
+* Generate Socky config file:
 @socky -g config/socky.yml@
 * Uncomment two lines in @config/socky.yml@:
 
