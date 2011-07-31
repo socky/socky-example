@@ -1,14 +1,19 @@
 <% content_for :head do %>
-  <%= socky :client_id => params[:login] %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      runChat('<%= params[:login] %>');
+    });
+  </script>
 <% end %>
 
 <%= link_to "logout", root_path, :id => "logout_link" %>
 <div id="chat_wrapper">
 	<div id="wrapper">
-		<ul id="messages"></ul>
+		<ul id="messages">
+		  <li class="system">Connecting...</li>
+		</ul>
 
-	  <%= form_tag message_socky_path, :id => "message_form" do %>
-	    <%= hidden_field_tag :current_user, params[:login] %>
+	  <%= form_tag '', :id => "message_form" do %>
 	    <%= text_field_tag :message, "", :class => "text" %>
 	    <%= submit_tag "Send", :class => "submit" %>
 	  <% end %>

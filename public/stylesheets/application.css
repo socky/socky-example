@@ -119,6 +119,9 @@ input.submit {
 #messages li.logout {
 	color: #f55;
 }
+#messages li.system {
+  font-weight: bold;
+}
 
 #messages li span{
 	color: black;

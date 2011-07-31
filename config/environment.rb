@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-SockyExample3::Application.initialize!
+SockyExample::Application.initialize!
