@@ -14,7 +14,7 @@
 		</ul>
 
 	  <%= form_tag '', :id => "message_form" do %>
-	    <%= text_field_tag :message, "", :class => "text" %>
+	    <%= text_field_tag :message, "", :class => "text", :autocomplete => "off" %>
 	    <%= submit_tag "Send", :class => "submit" %>
 	  <% end %>
 	</div>
