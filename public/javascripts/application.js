@@ -22,7 +22,7 @@ function runChat(username) {
   // { write:true } option will allow sending messages directly to server
   //   note: this will require enabling this in authenticator
   // { data: { login: username } } all 'data' options are passed to other users
-  channel = socky.subscribe("presence-chat-channel", { write: true, data: { login: username } });
+  var channel = socky.subscribe("presence-chat-channel", { write: true, data: { login: username } });
   
   // Bind message after successfull joining channel
   channel.bind("socky:subscribe:success", function(members) {
