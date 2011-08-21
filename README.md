@@ -6,10 +6,17 @@
 $ git clone git://github.com/socky/socky-example.git
 $ cd socky-example
 $ bundle install
-$ rails s
+$ bundle exec rails s
 ```
 
 Then install and configure [socky-server](http://github.com/socky/socky-server-ruby) and run it at port 3001.
+A `Gemfile` and `config.ru` for the server is included under the `socky-example-server/` directory:
+
+``` bash
+$ cd socky-example-server
+$ bundle install
+$ bundle exec thin -R config.ru -p3001 start
+```
 
 Point your browser to http://localhost:3000 and you will see result.
 
